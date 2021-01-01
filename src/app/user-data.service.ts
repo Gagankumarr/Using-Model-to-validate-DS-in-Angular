@@ -1,14 +1,23 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+
+interface dataType1{
+  name:string,
+  id:number,
+  Indian:boolean,
+}
 @Injectable({
   providedIn: 'root'
 })
 export class UserDataService {
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
   getData(){
-    let url="https://jsonplaceholder.typicode.com/todos/"
-    return this.http.get(url);
-    }
+     const data:dataType1={
+      name:'bagga',
+      id:1010,
+      Indian:true,
+     }
+    
+  }
   
 }
