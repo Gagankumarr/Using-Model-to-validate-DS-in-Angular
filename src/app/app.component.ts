@@ -7,10 +7,10 @@ import {UserDataService} from './user-data.service'
 })
 export class AppComponent {
   title = 'services';
-  name='';
+  
   constructor( private user:UserDataService){
-    console.warn(this.user.getData())
-    let data=this.user.getData();
-    this.name=data.name;
+    this.user.getData().subscribe(data=>{
+      console.warn(data)
+    })
   }
 }
