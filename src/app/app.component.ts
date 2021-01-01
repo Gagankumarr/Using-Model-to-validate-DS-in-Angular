@@ -7,10 +7,11 @@ import {UserDataService} from './user-data.service'
 })
 export class AppComponent {
   title = 'services';
-  
+  data=[];
   constructor( private user:UserDataService){
     this.user.getData().subscribe(data=>{
       console.warn(data)
+      this.data=data
     })
   }
 }

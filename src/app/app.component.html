@@ -1,2 +1,26 @@
-<h1> using Service and  Getting data from  service</h1>
-<h1> see console</h1>
+<h1> Showing Data from Api to User on Angular</h1>
+
+<table border=1>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            TITLE
+        </td>
+        <td>
+            USER ID
+        </td>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>
+            {{item.id}}
+        </td>
+        <td>
+            {{item.title}}
+        </td>
+        <td>
+            {{item.userId}}
+        </td>
+    </tr>
+</table>
